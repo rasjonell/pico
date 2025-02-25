@@ -1,0 +1,14 @@
+#!/bin/env bash
+
+
+echo "-> Getting file info"
+file ukn_reality.jpg
+echo ""
+echo "-> Getting Attribution URL with exiftool"
+exiftool ukn_reality.jpg | grep -i attribution
+echo ""
+echo "-> Getting Attribution URL Value with awk"
+exiftool ukn_reality.jpg | grep -i attribution | awk -F": " '{print $2}'
+echo ""
+echo "-> Decoding base64 string"
+exiftool ukn_reality.jpg | grep -i attribution | awk -F": " '{print $2}' | base64 -d
