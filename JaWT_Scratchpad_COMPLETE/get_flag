@@ -1,0 +1,16 @@
+#!/bin/env bash
+
+echo "You need to login NOT as admin"
+echo ""
+echo "-> Grab the jwt cookie, i have an example at ./test.jwt"
+echo "-> Run JohnTheRiper: john ./test.jwt"
+echo "-> Wait for a while..."
+echo "-> Get the secret key(it's ilovepico)"
+echo "-> Go to https://jwt.io paste the original jwt(./test.jwt)"
+echo "-> Change the \"user\": \"test\" to \"user\": \"admin\""
+echo "-> Enter the secret bellow"
+echo "-> Grab the encoded jwt and insert that in the cookie"
+echo "-> Reload"
+echo "......"
+echo "-> Profit"
+
